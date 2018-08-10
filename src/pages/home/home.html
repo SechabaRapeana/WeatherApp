@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle >
+        <ion-icon name ="menu" ></ion-icon>
+      </button>
+    <ion-title>
+      
+      Home Page
+    </ion-title>
+  </ion-navbar>
+ </ion-header>
+ 
+ <ion-content padding class="bg">
+ 
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Location" #location></ion-input>
+    </ion-item><br>
+    <button ion-button color="Primary" block (click)="search(location.value)">Search</button>
+
+<div class ="container" color = "white">
+   <h1 color = "white"> {{temperature}} °C </h1> <br>
+  <h3>wind Speed {{wind}} km/h</h3> <br>
+  <h3> Humidity {{humidity}} %</h3><br>
+   <h2>Place:{{place}}</h2><br>
+  </div>
+ 
+<!-- 
+<button ion-button color="Primary" block (click)="forecast(location.value)">Forecast</button>
+
+<ion-card>
+
+  <ion-card-header>
+
+   {{date|date:'EEEE'}}
+  </ion-card-header>
+
+  <ion-card-content colspan>
+    {{temperature}} °C
+   <img src="{{icon1}}">
+  </ion-card-content>
+
+</ion-card> -->
+
+  </ion-list>
+
+</ion-content >
